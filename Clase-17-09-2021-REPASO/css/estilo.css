@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+body {
+    background-color: #f0f2f5;
+}
+
+.logoFB {
+    width: 198px;
+}
+
+.contenedor-data {
+    margin: 0 20%;
+}
+
+#container-foto img {
+    width: 160px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.fondo-blanco {
+    background-color: #fff;
+}
+
+#container-foto p {
+    padding: 12px;
+    text-align: center;
+    color: #4b4f56;
+    font-weight: 600;
+}
+
+#container-foto {
+    max-width: 160px;
+    /* border-radius: 15px; */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
