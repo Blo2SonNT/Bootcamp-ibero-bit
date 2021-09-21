@@ -35,7 +35,31 @@ body {
 
 #container-foto {
     max-width: 160px;
-    /* border-radius: 15px; */
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-radius: 15px;
+    /* border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px; */
+    border: solid 1px #dadada;
+}
+
+.reparto-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.flex-formulario input {
+    margin: 10px 0;
+    width: 250px;
+    padding: 14px 16px;
+    border-radius: 6px;
+    border: 1px solid #dddfe2;
 }
