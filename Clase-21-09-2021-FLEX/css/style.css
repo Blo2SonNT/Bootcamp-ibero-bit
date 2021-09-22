@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+}
+
+.contenedor-padre div {
+    background-color: #8c00ff;
+    height: 150px;
+    width: 150px;
+    border: 2px solid #000;
+}
+
+.contenedor-padre {
+    background-color: #d0ff00;
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+}
+
+img {
+    width: 50%;
+}
+
+.contenedor-hijo-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 1s;
+}
+
+.titulo {
+    font-family: arial;
+    margin-top: 10px;
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.bisnieto {
+    width: 100%;
+    height: 30px;
+    background-color: rgb(255, 41, 87);
+}
+
+.contenedor-hijo-1:hover {
+    background-color: #00ffff;
+    color: rgb(255, 0, 0);
+}
+
+.titulo:hover {
+    color: #000000;
+}
