@@ -1,0 +1,97 @@
+:root {
+    --color-verde: #02ff4e;
+    --color-rojo: #ff0202;
+    --color-azul: #0059ff;
+    --color-amarillo: #eed80f;
+}
+
+body {
+    margin: 0;
+    /* background-color: #8502ff; */
+}
+
+.cuadro1,
+.cuadro2,
+.cuadro3,
+.cuadro4,
+.cuadro5,
+.cuadro6,
+.cuadro7,
+.cuadro8 {
+    width: 200px;
+    height: 200px;
+}
+
+.cuadro1 {
+    background-color: var(--color-verde);
+}
+
+.cuadro2 {
+    background-color: #eed80f;
+}
+
+.cuadro3 {
+    background-color: var(--color-verde);
+}
+
+.cuadro4 {
+    background-color: var(--color-verde);
+}
+
+.cuadro5 {
+    background-color: var(--color-verde);
+}
+
+.cuadro6 {
+    background-color: var(--color-verde);
+}
+
+.cuadro7 {
+    background-color: var(--color-verde);
+}
+
+.cuadro8 {
+    background-color: var(--color-verde);
+}
+
+.link-google:active {
+    color: #00ffff;
+}
+
+.lista:active {
+    border: solid 2px var(--color-rojo);
+}
+
+.lista option:checked {
+    color: var(--color-azul);
+    background-color: var(--color-verde);
+}
+
+input[type="radio"]:checked {
+    box-shadow: 0 0 0 2px var(--color-amarillo);
+    width: 25px;
+    height: 25px;
+}
+
+input[type="text"] {
+    border: none;
+}
+
+input[type="text"]:focus {
+    border: 3px solid var(--color-azul);
+    color: var(--color-verde);
+    background-color: rgb(255, 174, 0);
+}
+
+.link-google:visited {
+    color: var(--color-rojo);
+}
+
+.link-flores:visited {
+    color: #daa520;
+}
+
+.cuadro2 :nth-child(1) {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
