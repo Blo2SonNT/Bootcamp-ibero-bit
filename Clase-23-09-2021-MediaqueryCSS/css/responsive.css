@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root {
+    --color-azul: #18c7f3;
+    --color-amarillo: #eedf0b;
+    --color-verde: #40df2b;
+    --color-rojo: #f83636;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.contenedor-padre {
+    background-color: var(--color-azul);
+    display: flex;
+    justify-content: space-around;
+}
+
+.contenedor-padre div {
+    width: 50%;
+    height: 120px;
+}
+
+.objeto1 {
+    background-color: var(--color-amarillo);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2%;
+}
+
+.objeto2 {
+    background-color: var(--color-verde);
+}
+
+h1 {
+    color: #2f2f2f;
+}
+
+@media (max-width: 600px) {
+    .objeto1 :nth-child(1) {
+        display: none;
+    }
+    .objeto2 :nth-child(1) {
+        font-size: 0.5rem;
+    }
+    h1:hover {
+        color: #9932cc;
+    }
+}
+
+@media (min-width: 600px) {
+    .objeto1 :nth-child(2) {
+        display: none;
+    }
+    .objeto2 :nth-child(1) {
+        font-size: 2rem;
+    }
+}
+
+table,
+tr,
+th,
+td {
+    border: #000 solid 1px;
+}
+
+.error {
+    background-color: #ffa9a9;
+    color: #f83636;
+}
