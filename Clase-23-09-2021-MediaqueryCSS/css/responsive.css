@@ -70,3 +70,12 @@ td {
     background-color: #ffa9a9;
     color: #f83636;
 }
+
+.custom-miguel {
+    color: #0000ff;
+    border: #a52a2a 2px solid;
+}
+
+.custom-miguel:hover {
+    color: var(--color-verde);
+}
