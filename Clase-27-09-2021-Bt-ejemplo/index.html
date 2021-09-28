@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bt/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mian.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand link-logo size-logo d-flex justify-content-center align-items-center" href="#">
+                <img src="img/logo.svg" class="w-100 estilo-sombra">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 menu-opt">
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="#">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold">Contacto</a>
+                    </li>
+                </ul>
+                <form class="d-flex transform-form">
+                    <div class="input-group formulario_busqueda mb-3">
+                        <input type="text" class="form-control" placeholder="Busqueda..." aria-label="Busqueda..." aria-describedby="basic-addon2">
+                        <button type="button" class="input-group-text" id="basic-addon2">Buscar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid bg-secondary sticky-top">
+        <div class="container d-flex justify-content-end align-items-center">
+            <a href="#" class="btn btn-link text-decoration-none text-light fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <i class="far fa-calendar-plus"></i> Apartar cita
+            </a>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="slider_peluqueria" class="carousel slide mt-5" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#slider_peluqueria" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#slider_peluqueria" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#slider_peluqueria" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#slider_peluqueria" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/slider1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/slider2.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/slider3.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/slider4.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#slider_peluqueria" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#slider_peluqueria" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo
+        obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium
+        fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum
+        sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam
+        aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet
+        consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet
+        iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati
+        quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat
+        commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi,
+        quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur
+        adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum
+        error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem
+        unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur
+        ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure
+        veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor,
+        sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati
+        quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat
+        commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi,
+        quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur
+        adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum
+        error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem
+        unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur
+        ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure
+        veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor,
+        sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati
+        quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat
+        commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi,
+        quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur
+        adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum
+        error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem
+        unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur
+        ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure
+        veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor,
+        sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati
+        quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat
+        commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi,
+        quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur
+        adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum
+        error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem
+        unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur
+        ipsa. Cum sequi, quis eum alias iure veniam aliquam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iure harum error explicabo obcaecati quae, dolorem unde, accusantium fugiat commodi pariatur ipsa. Cum sequi, quis eum alias iure
+        veniam aliquam?
+    </p>
+
+    <script src="js/bt/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+.size-logo {
+    max-width: 60px;
+    min-height: 80px;
+}
+
+.menu-opt li a:hover {
+    color: #ffffff !important;
+}
+
+.link-logo :nth-child(1) {
+    -webkit-box-shadow: 1px 2px 26px 14px #FFFFFF;
+    box-shadow: 1px 2px 26px 14px #FFFFFF;
+    border-radius: 50%;
+}
+
+
+/* .estilo-sombra{
+    -webkit-box-shadow: 1px 2px 26px 14px #FFFFFF;
+    box-shadow: 1px 2px 26px 14px #FFFFFF;
+    border-radius: 50%;
+} */
+
+.formulario_busqueda input {
+    background-color: transparent;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.formulario_busqueda button {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.transform-form {
+    transform: translateY(8px);
+}
