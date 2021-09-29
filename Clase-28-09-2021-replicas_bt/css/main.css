@@ -1,0 +1,41 @@
+:root {
+    --gris-fb: #f0f2f5;
+    --borde-perfiles: 15px;
+}
+
+body {
+    background-color: var(--gris-fb);
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+}
+
+.logo-fb {
+    width: 35%;
+}
+
+.seccion-1,
+.seccion-2 {
+    height: 70vh;
+}
+
+.data-perfil img {
+    border-top-left-radius: var(--borde-perfiles);
+    border-top-right-radius: var(--borde-perfiles);
+    max-width: 160px;
+    max-height: 160px;
+}
+
+.data-perfil {
+    border-color: #a8a8a8 !important;
+    border-radius: var(--borde-perfiles);
+}
+
+.seccion-perfiles {
+    border-radius: var(--borde-perfiles);
+}
+
+
+/* color: #4b4f56; */
+
+.perfil-extra {
+    width: 160px;
+}
