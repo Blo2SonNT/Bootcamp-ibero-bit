@@ -7,6 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <title>Inicio de sesion facebook</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
 </head>
 
 <body>
@@ -19,25 +21,35 @@
                 <img src="img/logo-facebook.svg" class="logo-fb" alt="">
                 <h1>Inicios de sesión recientes</h1>
                 <p>Haz clic en tu foto o agrega una cuenta.</p>
-
-                <div class="d-flex bg-white seccion-perfiles">
-                    <div class="d-flex flex-column data-perfil border">
+                <div class="d-flex seccion-perfiles">
+                    <div class="d-flex flex-column data-perfil border bg-white">
                         <img src="img/gato.jpg" alt="">
                         <span class="py-3 text-center text-secondary fs-5">Miguel</span>
                     </div>
-                    <div class="perfil-extra h-100 bg-white ms-5"></div>
+                    <div class="perfil-extra h-100 bg-white ms-3 border">
+                        <div class="agregar-perfil bg-secondary d-flex justify-content-center align-items-center flex-column">
+                            <i class="fas fa-plus-circle fa-3x"></i>
+                        </div>
+                        <span class="py-3 text-center text-secondary fs-5">Agregar cuenta</span>
+                    </div>
                 </div>
 
             </section>
 
 
-
-
-            <section class="col-6 seccion-2">
-                <form>
-                    <input type="text">
-                    <input type="text">
-                </form>
+            <section class="col-6 seccion-2 d-flex justify-content-center align-items-center">
+                <div class="bg-white w-75 d-flex justify-content-center align-items-center flex-column rounded-3 sombra-caja">
+                    <form class="d-flex flex-column form-user justify-content-center align-items-center my-3">
+                        <input class="form-control form-control-lg my-2" type="text" placeholder="Correo electronico o numero de telefono" aria-label=".form-control-lg example">
+                        <input class="form-control form-control-lg my-2" type="text" placeholder="Contraseña" aria-label=".form-control-lg example">
+                        <div class="d-grid gap-2 w-100 mt-3">
+                            <button class="btn btn-primary fs-4 fw-bold" type="button">Iniciar sesion</button>
+                        </div>
+                    </form>
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                    <hr>
+                    <button type="button" class="btn boton-nueva-cuenta py-3 fw-bold text-white mb-4">Crear nueva cuenta</button>
+                </div>
             </section>
 
 
