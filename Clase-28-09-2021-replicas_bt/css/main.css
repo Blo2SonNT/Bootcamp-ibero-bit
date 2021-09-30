@@ -2,6 +2,7 @@
     --gris-fb: #f0f2f5;
     --borde-perfiles: 15px;
     --verde-fb: #42b72a;
+    --links-fb: #8a8d91;
 }
 
 body {
@@ -19,12 +20,18 @@ body {
     height: 70vh;
 }
 
-.data-perfil img,
-.agregar-perfil {
+.data-perfil img {
     border-top-left-radius: var(--borde-perfiles);
     border-top-right-radius: var(--borde-perfiles);
     width: 160px;
     height: 160px;
+}
+
+.agregar-perfil {
+    border-top-left-radius: var(--borde-perfiles);
+    border-top-right-radius: var(--borde-perfiles);
+    height: 160px;
+    background-color: var(--gris-fb);
 }
 
 .data-perfil,
@@ -57,4 +64,37 @@ hr {
 .sombra-caja {
     -webkit-box-shadow: 5px 10px 24px 4px rgba(0, 0, 0, 0.24);
     box-shadow: 5px 10px 24px 4px rgba(0, 0, 0, 0.24);
+    margin-top: 40%;
+}
+
+.texto-cuenta-famosa {
+    width: 70%;
+}
+
+.footer-fb {
+    height: 25vh;
+}
+
+.fila-enlaces-idiomas a,
+.item-footer-link {
+    margin: 0 8px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: var(--links-fb);
+}
+
+.btn-mas-idiomas {
+    background-color: var(--gris-fb);
+    width: 30px;
+    height: 20px;
+    transform: translateY(-5px);
+}
+
+.ul-link-footer2 {
+    margin-right: 19%;
+}
+
+.copy-fb {
+    font-size: 11px;
+    color: var(--links-fb);
 }
