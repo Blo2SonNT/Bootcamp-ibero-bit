@@ -1,0 +1,9 @@
+* {
+    margin: 0;
+}
+
+.mi-barra {
+    display: flex;
+    justify-content: space-between;
+    background-color: aqua;
+}
