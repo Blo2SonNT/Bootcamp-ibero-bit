@@ -23,35 +23,35 @@
 
 
 
-var nombre = prompt("Cual es su nombre?")
-var numero = prompt("Hasta que numero deseas la lista?")
-let contenido = ''
+// var nombre = prompt("Cual es su nombre?")
+// var numero = prompt("Hasta que numero deseas la lista?")
+// let contenido = ''
 
-let titulo_web = document.querySelector("#nombre_usuario")
-titulo_web.innerHTML = `hola ${nombre}`
+// let titulo_web = document.querySelector("#nombre_usuario")
+// titulo_web.innerHTML = `hola ${nombre}`
 
-for (let x = 0; x <= numero; x++) {
-    contenido += `<li>El numero es ${x}</li>`
-}
+// for (let x = 0; x <= numero; x++) {
+//     contenido += `<li>El numero es ${x}</li>`
+// }
 
-let lista_web = document.getElementById("lista")
-lista_web.innerHTML = `
-    <ul>
-        ${contenido}
-    </ul>
-`
+// let lista_web = document.getElementById("lista")
+// lista_web.innerHTML = `
+//     <ul>
+//         ${contenido}
+//     </ul>
+// `
 
-//Ejercicio 1 Taller
+// //Ejercicio 1 Taller
 // let numero_ej1 = prompt("Hasta que numero desea sumar?")
 // suma = 0
 // mensaje = ''
-for (let x = 1; x <= numero_ej1; x++) {
+// for (let x = 1; x <= numero_ej1; x++) {
 
-    mensaje = `La operación de ${x} + ${suma} es: `
-    suma = suma + x;
-    mensaje = mensaje + suma
-    console.log(mensaje);
-}
+//     mensaje = `La operación de ${x} + ${suma} es: `
+//     suma = suma + x;
+//     mensaje = mensaje + suma
+//     console.log(mensaje);
+// }
 
 // for (let x=1; x<= numero_ej1; x++){
 
@@ -72,3 +72,15 @@ for (let x = 1; x <= numero_ej1; x++) {
 //     suma = suma + x;
 
 // }
+
+let numero = prompt("Ingrese el numero");
+let suma = 0;
+
+if (numero > 0) {
+    for (i = 1; i <= 10; i++) {
+        suma += numero * i
+        console.log(numero + " x " + i + " = " + numero * i + " suma al momento: " + suma);
+    }
+} else {
+    console.error("Numero no valido")
+}
