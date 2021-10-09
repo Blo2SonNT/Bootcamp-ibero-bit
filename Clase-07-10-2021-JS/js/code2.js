@@ -1,3 +1,7 @@
+var input_nombre = document.getElementById('nombre_user')
+var input_telefono = document.getElementById('telefono_user')
+var input_direccion = document.getElementById('direccion_user')
+
 function guardar_data() {
     // debugger
     let contador_data = 1
@@ -68,11 +72,13 @@ listado_data(1, true)
 
 
 function editar_elemento(indice_dato) {
+
+    let boton = document.getElementById("boton_formulario")
+    boton.setAttribute('onclick', `editar_elemento_accion(${indice_dato})`)
+
     let titulo_formulario = document.querySelector("#titulo_accion_formulario")
     titulo_formulario.innerHTML = `Actualizar dato`
-    var input_nombre = document.getElementById('nombre_user')
-    var input_telefono = document.getElementById('telefono_user')
-    var input_direccion = document.getElementById('direccion_user')
+
 
     input_nombre.value = localStorage.getItem("nombre_" + indice_dato)
     input_telefono.value = localStorage.getItem("telefono_" + indice_dato)
@@ -84,7 +90,34 @@ function editar_elemento(indice_dato) {
 }
 
 function editar_elemento_accion(indice_dato) {
+    console.log(indice_dato)
+    var nombre_actualizacion = document.getElementById('nombre_user').value
+    var telefono_actualizacion = document.getElementById('telefono_user').value
+    var direccion_actualizacion = document.querySelector('#direccion_user').value
 
+    // console.log(localStorage.getItem("nombre_" + indice_dato))
+    // console.log(localStorage.getItem("telefono_" + indice_dato))
+    // console.log(localStorage.getItem("direccion_" + indice_dato))
+
+    localStorage.setItem("nombre_" + indice_dato, nombre_actualizacion)
+    localStorage.setItem("telefono_" + indice_dato, telefono_actualizacion)
+    localStorage.setItem("direccion_" + indice_dato, direccion_actualizacion)
+
+    // console.log(localStorage.getItem("nombre_" + indice_dato))
+    // console.log(localStorage.getItem("telefono_" + indice_dato))
+    // console.log(localStorage.getItem("direccion_" + indice_dato))
+
+    let body_tabla = document.querySelector("#data-usuario-read")
+    body_tabla.innerHTML = ''
+
+    let titulo_formulario = document.querySelector("#titulo_accion_formulario")
+    titulo_formulario.innerHTML = `Insertar nuevo dato`
+
+    listado_data(1, true)
+    let boton = document.getElementById("boton_formulario")
+    boton.setAttribute('onclick', `guardar_data()`)
+
+    document.getElementById("mi_formulario").reset()
 }
 
 function borrar_elemento() {
