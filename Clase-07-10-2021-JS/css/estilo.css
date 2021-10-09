@@ -1,0 +1,13 @@
+.fas{
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.fa-pen:hover{
+    color: #1e8aee;
+}
+
+.fa-trash:hover{
+    color: #ff0101;
+}

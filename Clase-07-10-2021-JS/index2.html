@@ -8,12 +8,14 @@
         integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
     <title>Hello, world!</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 
 <body>
 
     <div class="container">
-        <form class="my-5">
+        <h2 id="titulo_accion_formulario" class="my-5"></h2>
+        <form class="mt-3 mb-5">
             <div class="mb-3">
                 <label for="nombre_user" class="form-label">Nombre</label>
                 <input type="email" class="form-control" id="nombre_user">
@@ -31,7 +33,7 @@
 
         <h4>Lista de datos</h4>
         <div>
-            <table class="table">
+            <table class="table table-striped">
                 <thead>
                     <tr>
                         <th scope="col">Nombre</th>
