@@ -77,11 +77,11 @@ for (let x = 1; x <= 2; x++) {
     var strong_link_a = document.createElement('b')
     var texto_b = ''
     if (x == 1) {
-        a_li.className = 'nav-link'
+        a_li.className = 'nav-link fw-bold text-white'
         a_li.href = "#"
         texto_b = "Inicio"
     } else if (x == 2) {
-        a_li.className = "nav-link dropdown-toggle"
+        a_li.className = "nav-link dropdown-toggle fw-bold text-white"
         a_li.href = "#"
         a_li.id = "navbarDropdown"
         a_li.setAttribute("role", "button")
