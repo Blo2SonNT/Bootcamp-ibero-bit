@@ -27,7 +27,7 @@ debugger
 const body = document.querySelector('body')
 
 let navbar = document.createElement('nav')
-navbar.className = 'navbar navbar-expand-lg navbar-dark bg-dark'
+navbar.className = 'navbar navbar-expand-lg navbar-dark bg-azul-amazon'
 navbar.style.padding = '16px 50px'
 body.appendChild(navbar)
 
@@ -74,7 +74,6 @@ for (let x = 1; x <= 2; x++) {
     var li_opts = document.createElement('li')
     li_opts.className = (x == 2) ? 'nav-item dropdown' : 'nav-item'
     var a_li = document.createElement('a')
-    var strong_link_a = document.createElement('b')
     var texto_b = ''
     if (x == 1) {
         a_li.className = 'nav-link fw-bold text-white'
