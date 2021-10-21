@@ -72,6 +72,6 @@ let numeros = [1, 8, 6, 10, 100, 4, 45, 22]
 numeros.sort()
     // (8) [1, 10, 100, 22, 4, 45, 6, 8]
 numeros.sort(function(a, b) { return a - b })
-    // (8) [1, 4, 6, 8, 10, 22, 45, 100]0: 11: 42: 63: 84: 105: 226: 457: 100length: 8[[Prototype]]: Array(0)
+    // (8) [1, 4, 6, 8, 10, 22, 45, 100]
 numeros.sort(function(a, b) { return b - a })
     // (8) [100, 45, 22, 10, 8, 6, 4, 1]
