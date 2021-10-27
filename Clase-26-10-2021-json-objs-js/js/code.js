@@ -50,3 +50,29 @@ let edad = 40
 
 let saludando = new Saludo("Juan", edad)
 console.log(saludando.edad_persona() + " " + saludando.chao_persona())
+
+
+class saludoComplejo extends Saludo {
+
+    profesion_saludo = ''
+
+    constructor(nombre, edad, profesion) {
+        super(nombre, edad)
+        this.profesion_saludo = profesion
+    }
+
+    saludo_desarrollador() {
+        if (this.profesion_saludo == "desarrollador") {
+            return `Estoy aprendiendo a programar`
+        } else {
+            return `chuste de aqui`
+        }
+    }
+
+
+}
+
+let saludoProfesor = new saludoComplejo("fulano", 40, "quimico")
+console.log(saludoProfesor.saludo_persona())
+
+console.log(saludoProfesor.saludo_desarrollador())
