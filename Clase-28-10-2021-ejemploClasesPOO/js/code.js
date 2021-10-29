@@ -1,4 +1,5 @@
 let productosTienda = [{
+        id: 1,
         nombre: "chocorramo",
         categoria: "ponque",
         precio: 1000,
@@ -6,6 +7,7 @@ let productosTienda = [{
         imagen: "https://www.larebajavirtual.com/images/productos/sii/F/300x300/chocoramo-26375-1563547527.png"
     },
     {
+        id: 2,
         nombre: "coca cola",
         categoria: "gaseosa",
         precio: 4500,
@@ -13,6 +15,7 @@ let productosTienda = [{
         imagen: "https://s1.eestatic.com/2017/06/28/cocinillas/cocinillas_227241432_116356253_1706x960.jpg"
     },
     {
+        id: 3,
         nombre: "gelatina",
         categoria: "postre",
         precio: 700,
@@ -20,6 +23,7 @@ let productosTienda = [{
         imagen: "https://saborgourmet.com//wp-content/uploads/como-hacer-gelatina.jpg"
     },
     {
+        id: 4,
         nombre: "perro caliente",
         categoria: "comida rapida",
         precio: 5000,
@@ -27,6 +31,7 @@ let productosTienda = [{
         imagen: "https://lh3.googleusercontent.com/proxy/2NyAcLs4F9NZThfIirIjBeRSPZPikVsE59WK7pB2d2FqCE-UNi7IctO8YFxgLbdQe7zYJMC_HuA5Dk-IVRPO0XsHtrRtzSinPF3OIiDBacE65B1HUJ1ZXLSg83i4FErPrvXqTKY03E4"
     },
     {
+        id: 5,
         nombre: "colombiana",
         categoria: "gaseosa",
         precio: 3200,
@@ -34,6 +39,7 @@ let productosTienda = [{
         imagen: "https://mercaldas.vteximg.com.br/arquivos/ids/184332-1300-1300/Gaseosa-POSTOBON-Colombiana-Botella-X15Lts.jpg?v=637012447025500000"
     },
     {
+        id: 6,
         nombre: "Trident",
         categoria: "Confiteria",
         precio: 100,
@@ -41,6 +47,7 @@ let productosTienda = [{
         imagen: "https://jumbocolombiafood.vteximg.com.br/arquivos/ids/3650357-750-750/7506105606077.jpg?v=637401998463170000"
     },
     {
+        id: 7,
         nombre: "Club colombia",
         categoria: "Cerveza",
         precio: 3000,
@@ -49,38 +56,31 @@ let productosTienda = [{
     }
 ]
 
+
+
+function formato_decimal(num) {
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
+}
+
 let contenedor_productos = document.getElementById("mis_productos")
+
+
 for (const iteracion of productosTienda) {
     contenedor_productos.innerHTML += `
 
     <div class="col">
-    <div class="card">
-    <img src="${iteracion.imagen}" class="card-img-top w-100 img-producto" alt="...">
-      <div class="card-body d-flex justify-content-center align-items-center flex-column">
-        <h5 class="card-title">${iteracion.nombre}</h5>
-        <p class="fw-bold card-text">${iteracion.proveedor}</p>
-        <button type="button" class="btn btn-dark" onclick="">Agregar al carrito</button>
-      </div>
+        <div class="card">
+            <img src="${iteracion.imagen}" class="card-img-top w-100 img-producto" alt="...">
+                <div class="card-body d-flex justify-content-center align-items-center flex-column">
+                    <h5 class="card-title">${iteracion.nombre}</h5>
+                    <h6 class="fw-bold">$${formato_decimal(iteracion.precio)}</h6>
+                    <p class="fw-bold card-text">${iteracion.proveedor}</p>
+                    <button type="button" class="btn btn-dark" onclick="agregar_producto_carrito(${iteracion.precio})">Agregar al carrito</button>
+                </div>
+        </div>
     </div>
-  </div>
-    
-        
     `
 }
-
-/* 
-<div class="col">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-
-
-*/
 
 class CarritoCompras {
     constructor() {
@@ -94,9 +94,7 @@ class CarritoCompras {
 
     precio_total() {
         let total_cuenta = 0
-        let lista_precio = ''
         this.productos.forEach(function(data_producto) {
-            // lista_precio += data_producto.precio + " - "
             total_cuenta = parseInt(total_cuenta) + parseInt(data_producto.precio)
         });
         return total_cuenta
@@ -105,7 +103,13 @@ class CarritoCompras {
 }
 let compras = new CarritoCompras()
 
-let producto1 = {
+function agregar_producto_carrito(precio_producto) {
+    let objeto_precio_precio = { precio: precio_producto }
+    console.log(compras.nuevo_producto(objeto_precio_precio))
+    document.getElementById("total_cuenta_user").innerHTML = compras.precio_total()
+}
+
+/*let producto1 = {
     nombre: "chocorramo",
     categoria: "ponque",
     precio: 1000,
@@ -126,13 +130,15 @@ let producto3 = {
 
 compras.nuevo_producto(producto1)
 compras.nuevo_producto(producto2)
-compras.nuevo_producto(producto3)
-console.log(compras.precio_total())
-    /*
-        {
-            nombre: "chocorramo", 
-            categoria: "ponque", 
-            precio: 1000, 
-            proveedor: "Ramo"
-        }
-    */
+compras.nuevo_producto(producto3)*/
+// console.log(compras.precio_total())
+/*
+    {
+        nombre: "chocorramo", 
+        categoria: "ponque", 
+        precio: 1000, 
+        proveedor: "Ramo"
+    }
+*/
+
+// console.log(Object.values(productosTienda[id_producto - 1]))
