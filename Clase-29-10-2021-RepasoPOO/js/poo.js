@@ -1,6 +1,6 @@
 let container_calc = document.querySelector("#vista-botones")
 let btns_calc = ''
-for (let btn = 1; btn <= 15; btn++) {
+for (let btn = 1; btn <= 16; btn++) {
     if (btn <= 9) {
         btns_calc += `
         <div class="col-4 py-4 d-flex justify-content-center align-items-center">
@@ -33,27 +33,36 @@ for (let btn = 1; btn <= 15; btn++) {
         case 13:
             btns_calc += `
             <div class="col-1 py-4 d-flex justify-content-center align-items-center">
-                <button class="btn btn-dark w-100" onclick="">-</button>
+                <button class="btn btn-dark w-100" onclick="guardar_numero('resta', true)">-</button>
             </div>
             `
             break;
         case 14:
             btns_calc += `
             <div class="col-1 py-4 d-flex justify-content-center align-items-center">
-                <button class="btn btn-dark w-100" onclick="">x</button>
+                <button class="btn btn-dark w-100" onclick="guardar_numero('multiplicacion', true)">x</button>
             </div>
             `
             break;
         case 15:
             btns_calc += `
             <div class="col-1 py-4 d-flex justify-content-center align-items-center">
-                <button class="btn btn-dark w-100" onclick="">/</button>
+                <button class="btn btn-dark w-100" onclick="guardar_numero('division', true)">/</button>
             </div>
             `
+            break;
+        case 16:
+            btns_calc += `
+                <div class="col-1 py-4 d-flex justify-content-center align-items-center">
+                    <button class="btn btn-dark w-100" onclick="document.querySelector('#pantalla_calculadora').value = ''">CE</button>
+                </div>
+                `
             break;
     }
 }
 container_calc.innerHTML = btns_calc
+
+
 
 class calculadora_operaciones {
 
@@ -108,7 +117,6 @@ function guardar_numero(numero_boton, accion_localstorage = false) {
             localStorage.setItem("primer_valor_declarado", true)
         } else {
             resultado(input_calculadora.value)
-                // localStorage.setItem("numero2", input_calculadora.value)
         }
     }
 }
@@ -125,6 +133,19 @@ function resultado(numero_siguiente) {
     switch (operacion) {
         case "suma":
             input_calculadora.value = operando.suma()
+            localStorage.clear()
+            break
+        case "resta":
+            input_calculadora.value = operando.resta()
+            localStorage.clear()
+            break
+        case "multiplicacion":
+            input_calculadora.value = operando.multiplicacion()
+            localStorage.clear()
+            break
+        case "division":
+            input_calculadora.value = operando.division()
+            localStorage.clear()
             break
     }
 }
