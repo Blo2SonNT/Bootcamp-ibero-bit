@@ -10,7 +10,7 @@ for (let btn = 1; btn <= 16; btn++) {
     }
     if (btn == 10) {
         btns_calc += `
-        <div class="col-6 py-4 d-flex justify-content-center align-items-center">
+        <div class="col-5 py-4 d-flex justify-content-center align-items-center">
             <button class="btn btn-dark w-100" onclick="guardar_numero(0)">0</button>
         </div>
         `
@@ -53,7 +53,7 @@ for (let btn = 1; btn <= 16; btn++) {
             break;
         case 16:
             btns_calc += `
-                <div class="col-1 py-4 d-flex justify-content-center align-items-center">
+                <div class="col-2 py-4 d-flex justify-content-center align-items-center">
                     <button class="btn btn-dark w-100" onclick="document.querySelector('#pantalla_calculadora').value = ''">CE</button>
                 </div>
                 `
