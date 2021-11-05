@@ -27,7 +27,7 @@ mi_array_2.forEach(function(numerito, pos) {
 })
 
 //Forma nueva
-// mi_array.forEach((numerito, pos) => {
-//     console.warn(numerito)
-//     console.log(pos)
-// });
+mi_array.forEach((numerito, pos) => {
+    console.warn(numerito)
+    console.log(pos)
+});
