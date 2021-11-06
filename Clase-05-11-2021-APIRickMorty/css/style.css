@@ -1,0 +1,17 @@
+.estado {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+}
+
+.muerto {
+    background-color: #e01a1a;
+}
+
+.vivo {
+    background-color: #11e211;
+}
+
+.desconocido {
+    background-color: #575757
+}
