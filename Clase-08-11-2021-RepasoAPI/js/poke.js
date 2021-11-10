@@ -21,7 +21,8 @@ info_api2.then(respuesta_api2 => respuesta_api2.json())
     .then(poke_info2 => {
         // console.log(poke_info2.sprites.other.dream_world.front_default)
         let info2 = poke_info2.sprites.other['official-artwork']
+        let imagen = Object.values(info2)
         document.getElementById("imagen2").innerHTML = `
-        <img src="${info2.front_default}" alt="">
+        <img src="${imagen[0]}" alt="">
         `
     })
