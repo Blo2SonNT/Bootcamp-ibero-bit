@@ -1,0 +1,15 @@
+.fas {
+    font-size: 1.4rem;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.fas:hover {
+    color: #2174e0;
+}
+
+.acciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
