@@ -3,28 +3,35 @@
         <div class="col-6 offset-3">
             <h6 class="text-secondary mb-3" routerLink="/admin"><i class="fas fa-angle-left"></i>&nbsp;Volver</h6>
             <h1>Registro producto</h1>
-            <form action="">
+            <form [formGroup]="inventarioForm" (ngSubmit)="guardarInventario()">
                 <div class="mb-3">
                     <label class="form-label">Nombre</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" formControlName="nombreProducto">
+                    <span class="text-danger fw-bold" *ngIf="inventarioForm.get('nombreProducto')?.hasError('required') && inventarioForm.get('nombreProducto')?.touched">El nombre del producto es obligatorio</span>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Fecha de vencimiento</label>
-                    <input type="date" class="form-control">
+                    <input type="date" class="form-control" formControlName="fecVenceProducto">
+                    <span class="text-danger fw-bold" *ngIf="inventarioForm.get('fecVenceProducto')?.hasError('required') && inventarioForm.get('fecVenceProducto')?.touched">La fecha de vencimiento del producto es obligatoria</span>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Precio</label>
-                    <input type="number" class="form-control">
+                    <input type="number" class="form-control" formControlName="precioProducto">
+                    <span class="text-danger fw-bold" *ngIf="inventarioForm.get('precioProducto')?.hasError('required') && inventarioForm.get('precioProducto')?.touched">El precio del producto es obligatorio</span><br>
+                    <span class="text-danger fw-bold" *ngIf="inventarioForm.get('precioProducto')?.hasError('pattern')">El precio debe ser un numero</span>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Cantidad</label>
-                    <input type="number" class="form-control">
+                    <input type="number" class="form-control" formControlName="cantidadProducto">
+                    <span class="text-danger fw-bold" *ngIf="inventarioForm.get('cantidadProducto')?.hasError('required') && inventarioForm.get('cantidadProducto')?.touched">La cantidad recibida del producto es obligatoria</span><br>
+                    <span class="text-danger fw-bold" *ngIf="inventarioForm.get('cantidadProducto')?.hasError('pattern')">La cantidad debe ser un numero</span>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Proveedor</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" formControlName="proveedorProducto">
+                    <span class="text-danger fw-bold" *ngIf="inventarioForm.get('proveedorProducto')?.hasError('required') && inventarioForm.get('proveedorProducto')?.touched">El proveedor del producto es obligatorio</span>
                 </div>
-                <button class="btn btn-success">Guardar producto</button>
+                <button type="submit" class="btn btn-success">Guardar producto</button>
             </form>
         </div>
     </div>
