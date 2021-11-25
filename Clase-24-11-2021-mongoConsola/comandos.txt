@@ -1,0 +1,179 @@
+> db.usuariosData.insertOne({"nombre":"Juan", "apellido":"perez", "edad":25, "tareas":["limpiar", "programar", 2]});
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("619eea40b1af284bb25818fd")
+}
+> db.usuariosData
+prueba_consola.usuariosData
+> db.usuariosData.insertOne({"nombre":"danie;", "apellido":"vargas", "edad":24, "tareas": ["supervisar", "programar", 2]});
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("619eeacdb1af284bb25818fe")
+}
+> db.usuariosData.find();
+{ "_id" : ObjectId("619eea40b1af284bb25818fd"), "nombre" : "Juan", "apellido" : "perez", "edad" : 25, "tareas" : [ "limpiar", "programar", 2 ] }
+{ "_id" : ObjectId("619eeacdb1af284bb25818fe"), "nombre" : "danie;", "apellido" : "vargas", "edad" : 24, "tareas" : [ "supervisar", "programar", 2 ] }
+> db.usuariosData.find().pretty();
+{
+        "_id" : ObjectId("619eea40b1af284bb25818fd"),
+        "nombre" : "Juan",
+        "apellido" : "perez",
+        "edad" : 25,
+        "tareas" : [
+                "limpiar",
+                "programar",
+                2
+        ]
+}
+{
+        "_id" : ObjectId("619eeacdb1af284bb25818fe"),
+        "nombre" : "danie;",
+        "apellido" : "vargas",
+        "edad" : 24,
+        "tareas" : [
+                "supervisar",
+                "programar",
+                2
+        ]
+}
+> show collections;
+usuariosData
+> show databases;
+admin           0.000GB
+config          0.000GB
+local           0.000GB
+prueba_compass  0.000GB
+prueba_consola  0.000GB
+> use prueba_consola
+switched to db prueba_consola
+> use prueba_consola
+switched to db prueba_consola
+> use prueba_consola
+switched to db prueba_consola
+> use prueba_consola
+switched to db prueba_consola
+> use prueba_consola
+switched to db prueba_consola
+> use prueba_consola
+switched to db prueba_consola
+> db.stats()
+{
+        "db" : "prueba_consola",
+        "collections" : 1,
+        "views" : 0,
+        "objects" : 2,
+        "avgObjSize" : 132,
+        "dataSize" : 264,
+        "storageSize" : 36864,
+        "freeStorageSize" : 16384,
+        "indexes" : 1,
+        "indexSize" : 36864,
+        "indexFreeStorageSize" : 16384,
+        "totalSize" : 73728,
+        "totalFreeStorageSize" : 32768,
+        "scaleFactor" : 1,
+        "fsUsedSize" : 270653693952,
+        "fsTotalSize" : 999534096384,
+        "ok" : 1
+}
+> db.usuariosData.insertMany({"nombre":"Juan", "edad":25},{"nombre": "Sebastian", "correo": "Sebastian123@gmail.com"},{"username":"blotoson", "identificacion": "6464648", "edad": 25})
+uncaught exception: TypeError: documents.map is not a function :
+DBCollection.prototype.insertMany@src/mongo/shell/crud_api.js:307:17
+@(shell):1:1
+> db.usuariosData.insertMany({"nombre":"Juan", "edad":25},{"nombre": "Sebastian", "correo": "Sebastian123@gmail.com"},{"username":"blotoson", "identificacion": "6464648", "edad": 25});
+uncaught exception: TypeError: documents.map is not a function :
+DBCollection.prototype.insertMany@src/mongo/shell/crud_api.js:307:17
+@(shell):1:1
+> db.usuariosData.insertMany(
+...     {"nombre":"Juan", "edad":25},
+...     {"nombre":"prueba", "edad":25}
+...
+... )
+uncaught exception: TypeError: documents.map is not a function :
+DBCollection.prototype.insertMany@src/mongo/shell/crud_api.js:307:17
+@(shell):1:1
+> db.usuariosData.insertMany([
+...     {"nombre":"Juan", "edad":25},
+...     {"nombre": "Sebastian", "correo": "Sebastian123@gmail.com"},
+...     {"username":"blotoson", "identificacion": "6464648", "edad": 25}
+... ])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("619ef080b1af284bb25818ff"),
+                ObjectId("619ef080b1af284bb2581900"),
+                ObjectId("619ef080b1af284bb2581901")
+        ]
+}
+> db.usuariosData.find().pretty();
+{
+        "_id" : ObjectId("619eea40b1af284bb25818fd"),
+        "nombre" : "Juan",
+        "apellido" : "perez",
+        "edad" : 25,
+        "tareas" : [
+                "limpiar",
+                "programar",
+                2
+        ]
+}
+{
+        "_id" : ObjectId("619eeacdb1af284bb25818fe"),
+        "nombre" : "danie;",
+        "apellido" : "vargas",
+        "edad" : 24,
+        "tareas" : [
+                "supervisar",
+                "programar",
+                2
+        ]
+}
+{
+        "_id" : ObjectId("619ef080b1af284bb25818ff"),
+        "nombre" : "Juan",
+        "edad" : 25
+}
+{
+        "_id" : ObjectId("619ef080b1af284bb2581900"),
+        "nombre" : "Sebastian",
+        "correo" : "Sebastian123@gmail.com"
+}
+{
+        "_id" : ObjectId("619ef080b1af284bb2581901"),
+        "username" : "blotoson",
+        "identificacion" : "6464648",
+        "edad" : 25
+}
+> db.usuariosData.find().pretty().limit(1);
+{
+        "_id" : ObjectId("619eea40b1af284bb25818fd"),
+        "nombre" : "Juan",
+        "apellido" : "perez",
+        "edad" : 25,
+        "tareas" : [
+                "limpiar",
+                "programar",
+                2
+        ]
+}
+> db.usuariosData.updateOne({"_id" : ObjectId("619eea40b1af284bb25818fd")}, {$set:{"nombre":"Alejandro"}});
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.usuariosData.find().pretty().limit(1);
+{
+        "_id" : ObjectId("619eea40b1af284bb25818fd"),
+        "nombre" : "Alejandro",
+        "apellido" : "perez",
+        "edad" : 25,
+        "tareas" : [
+                "limpiar",
+                "programar",
+                2
+        ]
+}
+> db.usuariosData.updateMany({"edad":25}, {$set:{"nombre": "update Many :D"}});
+{ "acknowledged" : true, "matchedCount" : 3, "modifiedCount" : 3 }
+> db.usuariosData.deleteOne({"_id" : ObjectId("619eea40b1af284bb25818fd")});
+{ "acknowledged" : true, "deletedCount" : 1 }
+> db.usuariosData.deleteMany({"edad":25});
+{ "acknowledged" : true, "deletedCount" : 2 }
+>
