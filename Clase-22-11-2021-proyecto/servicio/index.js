@@ -7,6 +7,8 @@ const app = express();
 
 conectarDB();
 
+app.use(express.json());
+
 // app.get('/', (req, res) => {
 //     res.send('Hola mundo con express, voy a desarrollar mi API');
 // })
