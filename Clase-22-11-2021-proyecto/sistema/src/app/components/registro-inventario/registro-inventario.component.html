@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-6 offset-3">
             <h6 class="text-secondary mb-3" routerLink="/admin"><i class="fas fa-angle-left"></i>&nbsp;Volver</h6>
-            <h1>Registro producto</h1>
+            <h1>{{ titulo_formulario }}</h1>
             <form [formGroup]="inventarioForm" (ngSubmit)="guardarInventario()">
                 <div class="mb-3">
                     <label class="form-label">Nombre</label>
