@@ -10,7 +10,10 @@ const inventarioController = require('../controllers/inventarioController');
 //     console.log("creando el producto");
 // })
 
-// router.get('/', inventarioController.crearProducto);
+router.get('/', inventarioController.obtenerProductos);
 router.post('/', inventarioController.crearProducto);
+router.get('/:id', inventarioController.obtenerProducto);
+router.put('/:id', inventarioController.actualizaProducto);
+router.delete('/:id', inventarioController.eliminarProducto);
 
 module.exports = router;
